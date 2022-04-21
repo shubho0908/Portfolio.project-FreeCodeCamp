@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      font-family: "Montserrat", sans-serif;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    #navbar {
+      position: fixed;
+      display: flex;
+      justify-content: flex-end;
+      font-size: 25px;
+      padding: 28px;
+      background-color: rgb(35, 35, 241);
+      width: 100%;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    }
+
+    #navbar a {
+      color: white;
+      text-decoration: none;
+      padding-right: 80px;
+      font-size: 18px;
+    }
+    #welcome-section {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+      background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+
+      height: 100vh;
+    }
+
+    .content {
+      color: white;
+      font-size: 42px;
+      text-align: center;
+    }
+    #projects {
+      height: 100vh;
+      background-color: #45567d;
+    }
+    .projects {
+      margin-top: 90px;
+      display: flex;
+      justify-content: center;
+      flex-flow: row wrap;
+    }
+    #p-1 {
+      background-color: white;
+      margin: 20px;
+      height: 400px;
+      padding: 25px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    }
+    h3 {
+      padding: 15px;
+      background-color: rgba(203, 203, 203, 0.585);
+      border-radius: 6px;
+      text-align: center;
+    }
+    #first {
+      padding-top: 35px;
+      height: 200px;
+      transition: all 0.5s;
+    }
+    #first:hover {
+      transform: scale(1.15);
+    }
+    #second {
+      padding-top: 35px;
+      height: 200px;
+      display: block;
+      margin: auto;
+      transition: all 0.5s;
+    }
+    #second:hover {
+      transform: scale(1.15);
+    }
+    #third {
+      padding-top: 45px;
+      display: block;
+      margin: auto;
+      transition: all 0.5s;
+      height: 180px;
+    }
+    #third:hover {
+      transform: scale(1.15);
+    }
+    #p-3 h4 {
+      margin-top: 70px;
+    }
+    #p-2 h4 {
+      margin-top: 60px;
+    }
+    h2 {
+      color: white;
+      padding-top: 90px;
+      font-size: 45px;
+      text-align: center;
+    }
+    #p-2 {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
+      margin: 20px;
+      height: 400px;
+      width: 340px;
+      padding: 25px;
+    }
+    h4 {
+      text-align: center;
+      margin-top: 55px;
+      background-color: rgb(255, 196, 0);
+      padding: 15px;
+      transition: all 0.3s;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    h4:hover {
+      background-color: rgb(255, 140, 0);
+      cursor: pointer;
+    }
+    #p-3 {
+      border-radius: 10px;
+      background-color: white;
+      margin: 20px;
+      height: 400px;
+      width: 300px;
+      padding: 25px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    }
+    #socials {
+      background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+      color: white;
+      height: 100vh;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #socials h1 {
+      font-size: 55px;
+    }
+    #profile-link h1 {
+      font-size: 25px;
+    }
+
+    h1 {
+      display: inline;
+    }
+
+    #freecodecamp a {
+      color: white;
+      padding-right: 30px;
+      display: flex;
+      align-items: center;
+    }
+    #freecodecamp {
+      transition: all 0.6s;
+    }
+    #freecodecamp:hover {
+      transform: translateY(13px);
+    }
+    #github {
+      transition: all 0.6s;
+    }
+    #github:hover {
+      transform: translateY(13px);
+    }
+    #linkedin {
+      transition: all 0.6s;
+    }
+    #linkedin:hover {
+      transform: translateY(13px);
+    }
+    #github a {
+      color: white;
+      padding-right: 30px;
+      display: flex;
+      align-items: center;
+    }
+    #linkedin a {
+      color: white;
+      padding-right: 30px;
+      display: flex;
+      align-items: center;
+    }
+
+    #profile-link {
+      margin-top: 27px;
+      display: flex;
+      flex-flow: row wrap;
+    }
+
+    #git {
+      padding-right: 10px;
+      height: 30px;
+    }
+    #linked {
+      padding-right: 10px;
+      height: 30px;
+    }
+    #free {
+      padding-right: 10px;
+      filter: invert();
+      height: 40px;
+    }
+    footer h3 {
+      padding: 50px;
+      font-family: "Courier New", Courier, monospace;
+    }
+
+    @media (max-width: 1245px) {
+      #projects {
+        height: fit-content;
+      }
+    }
+
+    h6:hover::before {
+      content: "< ";
+      color: rgb(255, 200, 0);
+    }
+    h6:hover::after {
+      content: " />";
+      color: rgb(255, 200, 0);
+    }
+  </style>
+  <body>
+    <div id="navbar">
+      <a href="#welcome-section">About</a>
+      <a href="#projects">Work</a>
+      <a href="#socials">Contact</a>
+    </div>
+    <section id="welcome-section">
+      <div class="content">
+        <h1>Hey! I am Shubho.</h1>
+        <h6>A Web Developer</h6>
+      </div>
+    </section>
+    <section id="projects">
+      <div class="project-tile">
+        <h2><u>My Projects</u></h2>
+        <div class="projects">
+          <div id="p-1">
+            <h3>Tribute Page</h3>
+            <img id="first" src="apj.png" alt="" />
+            <a href="https://codepen.io/shubho0908/pen/JjMegqV" target="_blank"
+              ><h4>View Project</h4></a
+            >
+          </div>
+          <div id="p-2">
+            <h3>Product Landing Page</h3>
+            <img src="guitar.png" alt="" id="second" />
+            <a href="https://codepen.io/shubho0908/pen/bGazVRm" target="_blank"
+              ><h4>View Project</h4></a
+            >
+          </div>
+          <div id="p-3">
+            <h3>Survey Form</h3>
+            <img src="form.png" alt="" id="third" />
+            <a href="https://codepen.io/shubho0908/pen/rNpodGx" target="_blank"
+              ><h4>View Project</h4></a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="socials">
+      <h1>Want to connect with me?</h1>
+      <div id="profile-link">
+        <div id="github">
+          <a href="https://github.com/shubho0908" target="_blank"
+            ><img
+              id="git"
+              src="https://www.nicepng.com/png/full/52-520535_free-files-github-github-icon-png-white.png"
+              alt=""
+            />
+            <h1>GitHub</h1></a
+          >
+        </div>
+        <div id="linkedin">
+          <a href="https://www.linkedin.com/in/shubho09/" target="_blank">
+            <img
+              id="linked"
+              src="https://iconsplace.com/wp-content/uploads/_icons/ffffff/256/png/linkedin-icon-18-256.png"
+              alt=""
+            />
+            <h1>LinkedIn</h1></a
+          >
+        </div>
+        <div id="freecodecamp">
+          <a href="https://www.freecodecamp.org/shubho09" target="_blank"
+            ><img
+              id="free"
+              src="https://cdn4.iconfinder.com/data/icons/logos-brands-5/24/freecodecamp-512.png"
+              alt=""
+            />
+            <h1>FreeCodeCamp</h1></a
+          >
+        </div>
+      </div>
+    </section>
+    <footer>
+      <h3>
+        Copyright &copy; Shubhojeet Bera, This is a Fake Portfolio Website made
+        for assignment/project purpose.
+      </h3>
+    </footer>
+  </body>
+</html>
